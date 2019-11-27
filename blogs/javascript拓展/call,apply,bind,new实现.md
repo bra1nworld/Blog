@@ -105,4 +105,11 @@ function objectFactory() {
     //若返回值结果是一个对象，则return一个对象，否则返回当前创建的obj　(返回值可能是一个简单值类型)
     return typeof ret === "object" ? ret : obj;
 }
+
+//es6写法
+function _new(fn, ...arg) {
+    const obj = Object.create(fn.prototype);
+    const ret = obj.apply(fn, arg);
+    return ret instanceof Object ? ret : obj;
+}
 ```

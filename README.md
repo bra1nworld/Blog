@@ -1,5 +1,11 @@
 # Blog
 
+## html
+
+[重定向](./blogs/html/重定向.md)  
+[浏览器缓存机制](./blogs/html/浏览器缓存机制.md)  
+
+
 ## javascript 基础
 
 [prototype,\_\_proto\_\_,constructor 关系](./blogs/javascript基础/prototype,__proto__,constructor关系.md)  
