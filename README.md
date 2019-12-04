@@ -34,7 +34,9 @@
 [模块加载方案](./blogs/javascript拓展/模块加载方案.md)  
 [slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)
 
+## 数据结构及算法
 
+[九种排序算法](./blogs/数据结构及算法/九种排序算法.md) 
 
 ## 应用
 
