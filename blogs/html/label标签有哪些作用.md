@@ -21,8 +21,9 @@
 </style>
 ```
 
-> 纯 CSS 实现点击切换效果
-> 2.input 的 forcs 事件会触发锚地定位。可以利用 label 当触发器实现选项卡切换效果[实例地址](https://demo.cssworld.cn/6/4-3.php)
+
+2.input 的 forcs 事件会触发锚地定位。可以利用 label 当触发器实现选项卡切换效果[实例地址](https://demo.cssworld.cn/6/4-3.php)  
+> 纯 CSS 实现点击切换效果  
 
 ```html
 <div class="box">
