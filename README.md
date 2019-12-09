@@ -4,6 +4,7 @@
 
 [重定向](./blogs/html/重定向.md)  
 [浏览器缓存机制](./blogs/html/浏览器缓存机制.md)  
+[label标签有哪些作用](./blogs/html/label标签有哪些作用.md)  
 
 ## css
 
