@@ -9,6 +9,7 @@
 Function.prototype.call = function(context) {
     //this 参数可以传null,当为null时，是为指向widnow
     var context = context || window;
+    //在context的this作用域内运行fn
     context.fn = this;
 
     var args = [];
@@ -16,6 +17,7 @@ Function.prototype.call = function(context) {
         args.push("arguments[" + i + "]");
     }
     //函数是可以有返回值的
+    //eval 这里 args 会自动调用 Array.toString() 这个方法
     var result = eval("context.fn(" + args + ")");
     delete context.fn;
     return result;

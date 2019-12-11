@@ -123,6 +123,6 @@ document.getElementById("button").addEventListener("click", function() {
 ```
 
 proxy优点:
-1.proxy 可以直接监听对象而非属性
-2.proxy可以直接监听数组的变化(defineProperty有部分数组的方法无法检测(push,pop,shift,unshift,slice,sort,reverse)
+1.proxy 可以直接监听对象而非属性  
+2.proxy可以直接监听数组的变化(defineProperty有部分数组的方法无法检测(push,pop,shift,unshift,slice,sort,reverse)  
 3.proxy还有很多其他拦截方法：apply,ownKeys,deleteProperty,has等
