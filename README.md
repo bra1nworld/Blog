@@ -1,17 +1,19 @@
 # Blog
 
+## 浏览器
+
+[浏览器缓存机制](./blogs/浏览器/浏览器缓存机制.md)
+
 ## html
 
 [重定向](./blogs/html/重定向.md)  
-[浏览器缓存机制](./blogs/html/浏览器缓存机制.md)  
-[label标签有哪些作用](./blogs/html/label标签有哪些作用.md)  
+[label 标签有哪些作用](./blogs/html/label标签有哪些作用.md)
 
 ## css
 
 [圣杯布局和双飞翼布局](./blogs/css/圣杯布局和双飞翼布局.md)  
-[何时使用margin和padding](./blogs/css/何时使用margin和padding.md)  
-[清除浮动的方式及其优缺点](./blogs/css/清除浮动的方式及其优缺点.md)  
-
+[何时使用 margin 和 padding](./blogs/css/何时使用margin和padding.md)  
+[清除浮动的方式及其优缺点](./blogs/css/清除浮动的方式及其优缺点.md)
 
 ## javascript 基础
 
@@ -38,10 +40,14 @@
 
 ## 数据结构及算法
 
-[九种排序算法](./blogs/数据结构及算法/九种排序算法.md) 
-[栈与队列](./blogs/数据结构及算法/栈与队列.md) 
+[九种排序算法](./blogs/数据结构及算法/九种排序算法.md)  
+[栈与队列](./blogs/数据结构及算法/栈与队列.md)  
+[链表](./blogs/数据结构及算法/链表.md)  
+[集合](./blogs/数据结构及算法/集合.md)  
+[字典](./blogs/数据结构及算法/字典.md)  
+[树](./blogs/数据结构及算法/树.md)
 
 ## 应用
 
 [前端实时下载](./blogs/应用/前端实时下载.md)  
-[util](./blogs/应用/util.md) 
+[util](./blogs/应用/util.md)
