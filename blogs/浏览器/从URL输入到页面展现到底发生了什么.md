@@ -83,7 +83,7 @@
 URL（Uniform Resource Locator） 统一资源定位符  
 scheme://host.domain:port/path/filename(https://www.w3school.com.cn/html/index.html)  
 
-* scheme:定义因特网服务的类型。常见的协议由http,https,ftp,file
+* scheme:定义因特网服务的类型。常见的协议有http,https,ftp,file
 * host: 定义域主机（http的默认主机为www）
 * domain: 定义因特网域名（w3school.com.cn）
 * port: 定义主机上的端口号 （http默认80，https默认443）
