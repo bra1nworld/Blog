@@ -14,6 +14,7 @@
 [http1.0,http1.1,http2,http3](./blogs/html/http1.0,http1.1,http2,http3.md)  
 [https](./blogs/html/https.md)  
 [web 实时推送](./blogs/html/web实时推送.md)  
+[Ajax](./blogs/html/Ajax.md)  
 [重定向](./blogs/html/重定向.md)  
 [label 标签有哪些作用](./blogs/html/label标签有哪些作用.md)
 
