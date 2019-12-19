@@ -63,8 +63,8 @@
 22.**js解析如下**
 
 * 浏览器创建Document对象并解析HTML，将解析的元素和文本节点添加到文档中，此时document。readystate为loading
-* HTML解析器遇到没有async和defer的script时，将他们添加到文档中，然后执行行内和外部脚本。这些脚本会同步执行，并且在脚本下载和执行时解析器会暂停，这样就可以用document.write（）把文本插入到输入中，**同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作script和他们之前的文档内容**
-* 当解析器遇到了设置了async属性的script时，开始并行下载脚本和解析文档，脚本会在它**下载完成后进行执行(此时解析器停止解析)**，defer属性的script时，也会并行下载脚本和解析文档，但是会**在解析器完成解析之后再去执行**，**异步脚本禁止使用document。write（）**
+* HTML解析器遇到没有async和defer的script时，将他们添加到文档中，然后执行行内和外部脚本。这些脚本会同步执行，并且在脚本下载和执行时解析器会暂停，这样就可以用document.write()把文本插入到输入中，**同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作script和他们之前的文档内容**
+* 当解析器遇到了设置了async属性的script时，开始并行下载脚本和解析文档，脚本会在它**下载完成后进行执行(此时解析器停止解析)**，defer属性的script时，也会并行下载脚本和解析文档，但是会**在解析器完成解析之后再去执行**，**异步脚本禁止使用document.write()**
 * 当文档解析完成，document.readState变成interactive
 * 浏览器在Document对象上触发DOMContentLoaded事件
 * 此时文档完全解析完成，浏览器可能还在等待图片等内容加载，等这些**内容完成载入并且所有异步脚本完成载入和执行**，document.readState变为complete,window触发load事件
@@ -115,7 +115,7 @@ TCP三次握手结束后，开始发送HTTP请求报文
 
 ### 1.请求行包含请求方法，URL，协议版本
 
-* 请求方法包含8种：GET POST PUT DELETE PATCH HEAD OPTIONS TRACE
+* 请求方法包含8种：GET POST PUT DELETE CONNECT HEAD OPTIONS TRACE
 * URL即请求地址，由<协议>://<主机>:<端口>/<路径>?<参数>组成
 * 协议版本即http版本号
 
