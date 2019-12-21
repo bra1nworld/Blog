@@ -22,10 +22,10 @@
 ## css
 
 [BFC](./blogs/css/BFC.md)  
+[浮动](./blogs/css/浮动.md)
 [常见 CSS 布局](./blogs/css/常见CSS布局.md)  
 [圣杯布局和双飞翼布局](./blogs/css/圣杯布局和双飞翼布局.md)  
-[何时使用 margin 和 padding](./blogs/css/何时使用margin和padding.md)  
-[清除浮动的方式及其优缺点](./blogs/css/清除浮动的方式及其优缺点.md)
+[何时使用 margin 和 padding](./blogs/css/何时使用margin和padding.md)
 
 ## javascript 基础
 
