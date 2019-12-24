@@ -111,7 +111,7 @@ function objectFactory() {
 //es6写法
 function _new(fn, ...arg) {
     const obj = Object.create(fn.prototype);
-    const ret = obj.apply(fn, arg);
+    const ret = fn.call(obj, ...arg);
     return ret instanceof Object ? ret : obj;
 }
 ```

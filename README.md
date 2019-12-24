@@ -35,6 +35,7 @@
 [词法作用域](./blogs/javascript基础/词法作用域.md)  
 [按值传递](./blogs/javascript基础/按值传递.md)  
 [闭包](./blogs/javascript基础/闭包.md)  
+[继承](./blogs/javascript基础/继承.md)  
 [创建对象的多种方式及优缺点](./blogs/javascript基础/创建对象的多种方式及优缺点.md)
 
 ## javascript 拓展
@@ -49,8 +50,17 @@
 [deepClone](./blogs/javascript拓展/deepClone.md)  
 [defineProperty 与 proxy](./blogs/javascript拓展/defineProperty与proxy.md)  
 [setTimeout,setInterval](./blogs/javascript拓展/setTimeout,setInterval.md)  
+[slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)  
 [模块加载方案](./blogs/javascript拓展/模块加载方案.md)  
-[slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)
+[跨域](./blogs/javascript拓展/跨域.md)  
+[DOM 事件机制](./blogs/javascript拓展/DOM事件机制.md)  
+[浏览器和 Node 的事件循环（Event Loop）](./blogs/javascript拓展/浏览器和Node的事件循环.md)
+
+## 页面性能与安全
+
+[页面性能优化方法](./blogs/页面性能与安全/页面性能优化方法.md)  
+[懒加载和预加载](./blogs/页面性能与安全/懒加载和预加载.md)  
+[XSS 与 CSRF](./blogs/页面性能与安全/XSS与CSRF.md)
 
 ## 数据结构及算法
 
