@@ -53,6 +53,7 @@
 [slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)  
 [模块加载方案](./blogs/javascript拓展/模块加载方案.md)  
 [跨域](./blogs/javascript拓展/跨域.md)  
+[异步编程](./blogs/javascript拓展/异步编程.md)  
 [DOM 事件机制](./blogs/javascript拓展/DOM事件机制.md)  
 [浏览器和 Node 的事件循环（Event Loop）](./blogs/javascript拓展/浏览器和Node的事件循环.md)
 
