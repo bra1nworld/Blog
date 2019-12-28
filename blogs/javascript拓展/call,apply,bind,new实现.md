@@ -22,6 +22,14 @@ Function.prototype.call = function(context) {
     delete context.fn;
     return result;
 };
+//简易版
+Function.prototype.call=(context,...args)=>{
+    let context=context||window;
+    context.fn=this;
+    let result=context.fn(...args)
+    delete context.fn;
+    return result
+}
 ```
 
 ## apply 的实现
@@ -46,6 +54,16 @@ Function.prototype.apply = function(context, arr) {
     delete context.fn;
     return result;
 };
+//简易版
+Function.prototype.apply=(context,arr)=>{
+    const context=context || window;
+    context.fn=this;
+
+    const result=context.fn(...arr);
+    delete context.fn;
+    return result
+}
+
 ```
 
 ## bind 的实现
@@ -82,6 +100,14 @@ Function.prototype.bind = function(context) {
     fBound.prototype = new fn();
     return fBound;
 };
+
+//简易版
+Function.prototype.bind=function(context,...args){
+    return (...innerArgs)=>{
+        this.apply(context,[...args,...innerArgs])
+    }
+}
+
 ```
 
 ## new 的实现

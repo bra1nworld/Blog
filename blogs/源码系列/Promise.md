@@ -295,7 +295,7 @@ then方法可以被同一个promise多次调用：当promise成功/失败执行�
 promise2=promise1.then(onFulfilled,onRejected);
 ```
 
-* 如果onFulfilled或者onRejected返回一个值x，则运行下面的**Promise解决过程**：[[Resolve]](promise2,x)
+* 如果onFulfilled或者onRejected返回一个值x，则运行下面的**Promise解决过程**：Resolve(promise2,x)
 * 如果onFulfilled或者onRejected跑出一个异常e，则promise2必须拒绝执行，并返回原因e
 * 如果onFulfilled不是函数且promise1成功执行，promise2必须成功执行并返回相同的值
 * 如果onRejected不是函数且promise1拒绝执行，promise2必须拒绝执行并返回相同的原因

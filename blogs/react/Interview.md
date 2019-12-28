@@ -48,6 +48,30 @@ render(){
 
 ## React最新的生命周期（16以后）
 
+React 16 之后有三个生命周期被废弃（但未删除）
+
+* componentWillMount
+* componentWillReceiveProps
+* componentWillUpdate
+
+1.挂载阶段
+
+* constructor: 构造函数，最先被执行，我们通常在构建函数里初始化state对象或者给自定义方法绑定this
+* getDerivedStateFromProps: statis getDerivedStateFromProps(nextProps,prevState),这是个静态方法，当我们接收到新的属性想去修改我们state，可以使用getDerivedStateFromProps
+* render:render函数是纯函数,只返回需要渲染的东西,不应该包含其他的业务逻辑，可以返回原生的DOM，React组件,Fragment,字符串数字等
+*componentDidMount:组件装载后调用，此时我们可以获取到DOM节点并操作，比如对服务器请求，订阅都可以写在这里，但是需要在componentWillUnmoung中取消订阅
+
+2.更新阶段
+
+* getDerivedStateFromProps:此方法在更新挂载阶段都可能调用
+* shouldComponentUpdate:shouldComponentUpdate(nextProps,nextState),有两个参数nextProps和nextState，表示新的属性和变化之后的state，返回一个boolean
+* render:更新阶段也会触发此生命周期
+* getSnapshotBeforeUpdate:getSnapshotBeforeUpdate(prevProps,prevState),这个方法在render之后，componentDidUpdate之后调用，这个函数有一个返回值，会作为第三个参数传给componentDidUpdate，如果你不想要返回值，可以返回null，此生命周期必须与componentDidUpdate搭配使用
+* componentDidUpdate:componentDidUpdate(prevProps,prevState,snapshot)，该方法在getSnapshotBeforeUpdate方法之后被调用，有三个参数prevProps,prvState,snapshot,如果触发某些回调函数时需要用到DOM元素的状态，则将对比或计算的过程迁移至getSnapshotBeforeUpdate,然后componentBeforeUpdate，然后componentDidUpdate中统一触发回调或更新状态
+
+3.卸载阶段
+
+* componentWillUnmount
 
 ## shouldComponentUpdate是做什么的（react性能优化是哪个周期函数）
 

@@ -51,6 +51,7 @@
 [defineProperty 与 proxy](./blogs/javascript拓展/defineProperty与proxy.md)  
 [setTimeout,setInterval](./blogs/javascript拓展/setTimeout,setInterval.md)  
 [slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)  
+[event类](./blogs/javascript拓展/event类.md)  
 [模块加载方案](./blogs/javascript拓展/模块加载方案.md)  
 [跨域](./blogs/javascript拓展/跨域.md)  
 [异步编程](./blogs/javascript拓展/异步编程.md)  
