@@ -326,7 +326,7 @@ constructor(props){
 2.shouldComponentUpdate  
 更新到自身的render，解析其下有哪些子组件需要渲染，并对**子组件**进行创建，按**递归顺序**挨个执行各个子组件至render，生成到父子组件对应的virtualDOM树，并与已有的Virtual DOM 树比较，计算出 **Virtual DOM真正变化的部分**，并只针对该部分进行的原生DOM操作
 
-* 第二阶段，此时DOM节点已经生成完毕，组件挂载完成，开始后续流程，先依次触发同步子组件以下函数，最后触发父组件的：
+* 第二阶段，此时DOM节点已经生成完毕，组件挂载完成，开始后续流程，先依次触发同步子组件以下函数，最后触发父组件的  
 1.getSnapshotBeforeUpdate  
 2.componentDidUpdate  
 React会按照上面的顺序依次执行这些函数，每个函数都是各个子组件的先执行，然后才是父组件的执行。最后顺序如下：
