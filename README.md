@@ -61,6 +61,9 @@
 ## React
 
 [React生命周期](./blogs/react/React生命周期.md)  
+[diff算法](./blogs/react/diff算法.md)  
+[虚拟DOM](./blogs/react/虚拟DOM.md)  
+[前端路由](./blogs/react/前端路由.md)  
 [Interview](./blogs/react/Interview.md)
 
 ## Webpack
