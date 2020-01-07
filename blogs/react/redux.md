@@ -1,6 +1,6 @@
 # Redux原理
 
-## Redux是什么
+## 一.Redux是什么
 
 Redux是javascript状态容器，能提供可预测化的状态管理。他认为：
 
@@ -31,7 +31,7 @@ Redux也规定，一个state对应一个View，只要State相同，View就相同
 2.然后，Store自动调用Reducer，并且传入两个参数：当前State和收到的Action，Reducer会返回新的State  
 3.State一旦有变化，Store就会调用监听函数，来更新View
 
-## 为什么要用Redux
+## 二.为什么要用Redux
 
 前端复杂性的根本原因是大量无规律的交互和异步操作
 &nbsp;
@@ -55,13 +55,13 @@ Redux也规定，一个state对应一个View，只要State相同，View就相同
 * 每个State变化可预测
 * 动作和状态统一管理
 
-## Redux思想追溯
+## 三.Redux思想追溯
 
 Reduxa作者在Redux.js官方文档Motivation一章中提到：
 > Following in steps of Flux,CQRS, and Event Sourcing,Redux attempts to make state mutations predictable by imposing certain restrictions on how and when updates can happen
 我们先了解下Flux，CQRS，ES（Event Sourcing事件溯源）几个概念
 
-### 什么是ES
+### 1.什么是ES
 
 * 不是保存对象的最新状态，而是保存对象产生的事件
 * 通过事件追溯得到对象最新状态
@@ -85,7 +85,7 @@ Reduxa作者在Redux.js官方文档Motivation一章中提到：
 * 事件丢失：因为ES存储都是基于事件的，所以一旦事件丢失就很难保证数据的完整性
 * 修改时必须兼容老结构：指的是因为老的事件不可变，所以当业务变动的时候新的事件必须兼容老结构
 
-### 什么是CQRS（Command Query Responsibility Segregation）
+### 2.什么是CQRS（Command Query Responsibility Segregation）
 
 顾名思义，**命令与查询职责分离**，-> **读写分离**
 
@@ -102,7 +102,7 @@ Reduxa作者在Redux.js官方文档Motivation一章中提到：
 
 * 强依赖高性能可靠的分布式消息队列
 
-### 什么是Flux
+### 3.什么是Flux
 
 Flux是一种架构思想，下面过程中，数据总是**单向流动**，任何相邻的部分都不会发生数据的双向流动，这保证了流程清晰，Flux的最大特点，就是**数据的单向流动**
 ![Flux](../../resource/blogs/images/redux/Flux.png)
@@ -112,7 +112,7 @@ Flux是一种架构思想，下面过程中，数据总是**单向流动**，任
 3.Dispatcher收到Action，要求Store进行相应的更新  
 4.Store更新后，发出一个’change‘事件
 
-#### Redux和Flux区别
+#### 1)Redux和Flux区别
 
 Redux是Flux思想的一种实现，同时又在其基础上做了改进，Redux还是秉承了Flux单向数据流，Store是唯一的数据源的思想
 
@@ -130,7 +130,7 @@ Flux中允许有多个Store，但是Redux中只允许有一个，相较于Flux�
 
 Redux中去除了Dispather概念,使用Store的Store.dispatch()方法把action传给Store，由于所有的action处理都会经过这个Store.dispathch()方法，Redux，Redux利用这一点，实现了与Koa，RubyRack类似的Middleware机制，Middleware可以让你在dispatch action后，到达store前这一段拦截并插入代码，可以任意操作action和Store，很容易实现灵活的日志打印，错误收集，API请求，路由等操作
 
-## Redux最佳实践
+## 三.Redux最佳实践
 
 * 用对象展开符增加代码可读性
 * 区分smart component（know the State）和dump component（完全不需要关心State）
@@ -143,9 +143,9 @@ Redux中去除了Dispather概念,使用Store的Store.dispatch()方法把action�
 * 请慎用自定义的Redux-middleware，错误的配置可能会影响到其他middleware
 * 有些时候有些项目你并不需要Redux
 
-## 简单实现Redux
+## 四.简单实现Redux
 
-### 状态管理器
+### 1.状态管理器
 
 ```javascript
 let state={
@@ -258,7 +258,7 @@ store.changeState({
 })
 ```
 
-### 有计划的状态管理器
+### 2.有计划的状态管理器
 
 我们用上面的状态管理器来实现一个自增，自减的计数器
 
@@ -367,9 +367,9 @@ store.changeState({
 })
 ```
 
-### 多文件协作
+### 3.多文件协作
 
-#### reducer的拆分和合并
+#### 1)reducer的拆分和合并
 
 我们知道reducer是一个计划函数，接受老的state，按计划返回新的state，那我们项目中，有大量的state，每个state都需要计划函数，如果全部写在一起会是啥样子？  
 所有的计划写在一个reducer函数里面，会导致reducer函数及其庞大复杂，按经验来说，我们肯定会按组件维度来拆分出很多个reducer函数，然后通过一个函数把他们合并起来  
@@ -490,7 +490,7 @@ store.dispatch({
 });
 ```
 
-#### state的拆分和合并
+#### 2)state的拆分和合并
 
 上一节，我们已经把reducer按组件维度拆分了，通过combineReducers合并起来，但是还有个问题，state我们还是写在一起的，这样会造成state树很庞大，难以维护。所以需要拆分，一个state，一个reducer写一块。
 
@@ -548,7 +548,7 @@ const createStore = function (reducer, initState) {
 * createStore的时候，用一个不匹配任何type的action，来触发state=reducer(state,action)
 * 因为action.type不匹配，每个子reducer都会进到default项，返回自己初始化的state，这样就获得了初始化的state树了
 
-### 中间件 middleware
+### 4.中间件 middleware
 
 中间件是对dispatch的拓展，或者说重写，增强dispatch的功能
 
@@ -653,7 +653,7 @@ const time=timeMiddleware(store)
 store.dispatch=exception(time(logger(next)))
 ```
 
-#### 中间件使用方式优化
+#### 1)中间件使用方式优化
 
 封装用法：
 
@@ -721,9 +721,9 @@ const rewriteCreateStoreFunc=applyMiddleware(exceptionMiddle,timeMiddleware,logg
 const store=createStore(reducer,initState,rewriteCreateStoreFunc)
 ```
 
-## 完整的Redux
+## 五.完整的Redux
 
-### 退订
+### 1.退订
 
 ```typescript
 function subscribe(listener){
@@ -744,7 +744,7 @@ const unsubscribe=store.subscribe(()=>{
 unsubscribe()
 ```
 
-### 中间件拿到的store
+### 2.中间件拿到的store
 
 现在中间件拿到了完整的store，它甚至可以修改subscribe方法，按照最小开发策略，我们只用把getState传入中间件即可
 
@@ -754,7 +754,7 @@ const simpleStore={getState:store.getState}
 const chain=middlewares.map(middleware=>middleware(simpleStore))
 ```
 
-#### compose
+#### 1)compose
 
 我们applyMiddleware中,把[A,B,C]转换成A(B(C(next))，是这样实现的：
 
@@ -782,7 +782,7 @@ export default function compose(...funcs){
 }
 ```
 
-### 省略initState
+### 3.省略initState
 
 有时候我们创建store的时候不传initState，如何使用？
 
@@ -802,7 +802,7 @@ function createStore(reducer,initState,rewariteCreateStoreFunc){
 
 ```
 
-### bindActionCreators
+### 4.bindActionCreators
 
 一般只有在 react-redux 的 connect 实现中用到。  
 他是做什么的？他通过闭包，把 dispatch 和 actionCreator 隐藏起来，让其他地方感知不到 redux 的存在。  
@@ -868,7 +868,7 @@ export default function bindActionCretors(actionCreators,dispatch){
 }
 ```
 
-## 总结
+## 六.总结
 
 * createStore创建store对象,包含getState,dispatch,subscribe,replaceReducer
 * reducer 是一个计划函数，接收旧的state和action，生成新的state
