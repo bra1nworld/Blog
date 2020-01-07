@@ -131,4 +131,4 @@ function createElm(vnode, insertedVnodeQueue) {
 
 ### Virtual DOM的diff
 
-[Virtual DOM](./diff算法.md)
+[Virtual DOM diff](./diff算法.md)
