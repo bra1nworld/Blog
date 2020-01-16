@@ -65,6 +65,7 @@
 [虚拟DOM](./blogs/react/虚拟DOM.md)  
 [前端路由](./blogs/react/前端路由.md)  
 [redux](./blogs/react/redux.md)  
+[hooks组件抽象](./blogs/react/hooks组件抽象.md)  
 [Interview](./blogs/react/Interview.md)
 
 ## Webpack
@@ -78,6 +79,7 @@
 ## 页面性能与安全
 
 [页面性能优化方法](./blogs/页面性能与安全/页面性能优化方法.md)  
+[动画及大量数据性能优化](./blogs/页面性能与安全/动画及大量数据性能优化.md)  
 [懒加载和预加载](./blogs/页面性能与安全/懒加载和预加载.md)  
 [XSS 与 CSRF](./blogs/页面性能与安全/XSS与CSRF.md)
 
