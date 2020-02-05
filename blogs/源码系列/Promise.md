@@ -8,7 +8,7 @@ Promise 的规范很多，如 Promise/A,Promise/B,Promise/D 以及 Promise/A 的
 
 几个与内容相关的规范
 
-* Promise 本质是一个状态机，每个 Promise 有三种状态：pending，resoloved 以及 rejected。状态转变只能是 pending->resolves 或者 pending->rejected。状态转变不可逆
+* Promise 本质是一个状态机，每个 Promise 有三种状态：pending，resoloved 以及 rejected。状态转变只能是 pending->resolved 或者 pending->rejected。状态转变不可逆
 * then 方法可以被同一个 promise 调用多次
 * then 方法必须返回一个 promise。规范 2.2.7 中规定，then 必须返回一个新的 Promise
 * 值穿透

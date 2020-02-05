@@ -1,5 +1,7 @@
 # Blog
 
+[myworld](https://dhy1994.github.io/myworld/)
+
 ## 浏览器
 
 [浏览器缓存机制](./blogs/浏览器/浏览器缓存机制.md)  
@@ -51,7 +53,7 @@
 [defineProperty 与 proxy](./blogs/javascript拓展/defineProperty与proxy.md)  
 [setTimeout,setInterval](./blogs/javascript拓展/setTimeout,setInterval.md)  
 [slice,substring,substr](./blogs/javascript拓展/slice,substring,substr.md)  
-[event类](./blogs/javascript拓展/event类.md)  
+[event 类](./blogs/javascript拓展/event类.md)  
 [模块加载方案](./blogs/javascript拓展/模块加载方案.md)  
 [跨域](./blogs/javascript拓展/跨域.md)  
 [异步编程](./blogs/javascript拓展/异步编程.md)  
@@ -60,10 +62,10 @@
 
 ## React
 
-[React生命周期](./blogs/react/React生命周期.md)  
+[React 生命周期](./blogs/react/React生命周期.md)  
 [hooks](./blogs/react/hooks.md)  
-[diff算法](./blogs/react/diff算法.md)  
-[虚拟DOM](./blogs/react/虚拟DOM.md)  
+[diff 算法](./blogs/react/diff算法.md)  
+[虚拟 DOM](./blogs/react/虚拟DOM.md)  
 [fiber](./blogs/react/fiber.md)  
 [前端路由](./blogs/react/前端路由.md)  
 [redux](./blogs/react/redux.md)  
