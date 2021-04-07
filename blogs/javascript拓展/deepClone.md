@@ -32,7 +32,7 @@ function clone(item) {
         for (const key in object) {
             if (object.hasOwnProperty(key)) {
                 const element = object[key];
-                o[key]=_clone(element)
+                o[key]=clone(element)
             }
         }
         return o
@@ -40,7 +40,7 @@ function clone(item) {
     function _cloneArray(arr){
         let a=[];
         for (const i of arr) {
-            a.push(_clone(i))
+            a.push(clone(i))
         }
         return a
     }
