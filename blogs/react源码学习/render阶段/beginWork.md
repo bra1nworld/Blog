@@ -1,6 +1,6 @@
 # beginwork
 
-![beginWork流程图](../../resource/blogs/images/Fiber架构的实现原理/beginWork流程图.png)
+![beginWork流程图](../../../resource/blogs/images/Fiber架构的实现原理/beginWork流程图.png)
 
 ## 方法概览
 

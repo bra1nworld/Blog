@@ -43,7 +43,7 @@ export function createFiberRoot(
 
 rootFiber 到 fiberRootNode 的引用
 
-![fiber](../../resource/blogs/images/Fiber架构的实现原理/ReactDOM.render.png)
+![fiber](../../../resource/blogs/images/Fiber架构的实现原理/ReactDOM.render.png)
 
 ## 创建 update
 

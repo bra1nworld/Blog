@@ -1,6 +1,6 @@
 # completeWork
 
-![completeWork流程图](../../resource/blogs/images/Fiber架构的实现原理/completeWork流程图.png)
+![completeWork流程图](../../../resource/blogs/images/Fiber架构的实现原理/completeWork流程图.png)
 
 组件执行 beginWork 后会创建子 Fiber 节点，节点上可能存在 effectTag。
 

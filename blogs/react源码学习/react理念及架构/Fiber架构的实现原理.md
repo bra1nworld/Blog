@@ -89,7 +89,7 @@ function App() {
 }
 ```
 
-![Fiber树](../../resource/blogs/images/Fiber架构的实现原理/fiber架构实例.png)
+![Fiber树](../../../resource/blogs/images/Fiber架构的实现原理/fiber架构实例.png)
 
 > 为什么父级指针叫做 return 而不是 parent 或者 father？因为作为一个工作单元，return 指节点执行完 completeWork 后会返回的下一个节点。子 Fiber 节点及其兄弟节点完成工作后会返回其父级节点。所以用 return 指代父级节点
 

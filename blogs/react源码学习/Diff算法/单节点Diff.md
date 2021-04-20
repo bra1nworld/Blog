@@ -21,7 +21,7 @@ if (isObject) {
 
 这个函数会做如下事情
 
-![单节点Diff](../../resource/blogs/images/Fiber架构的实现原理/单节点Diff.png)
+![单节点Diff](../../../resource/blogs/images/Fiber架构的实现原理/单节点Diff.png)
 
 判断第二步 DOM 节点是否可以复用：
 
