@@ -29,6 +29,7 @@
 [圣杯布局和双飞翼布局](./blogs/css/圣杯布局和双飞翼布局.md)  
 [何时使用 margin 和 padding](./blogs/css/何时使用margin和padding.md)  
 [居中一个元素](./blogs/css/居中元素.md)  
+[Flex](./blogs/css/flex.md)  
 [响应式布局](./blogs/css/响应式布局.md)
 
 ## javascript 基础

@@ -23,6 +23,7 @@ function clone(item) {
                 if(item.ignoreCase) flags+='i';
                 if(item.multiline) flags+='m'
                 return new RegExp(item.source,flags)
+            // Promise ArrayBuffer GeneratorFunction Map Set Symbol WeakMap
             default:
                 return _cloneObject(item)
         }
