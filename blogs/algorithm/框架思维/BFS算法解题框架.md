@@ -1,5 +1,13 @@
 # BFS 算法解题框架
 
+```typescript
+/*
+leecode:
+111.二叉树的最小深度（简单）
+752.打开转盘锁（中等）
+*/
+```
+
 DFS 和 BFS 的区别：
 
 DFS 算法就是回溯算法；
@@ -81,3 +89,183 @@ function minDepth(root: TreeNode) {
   return depth;
 }
 ```
+
+**1.为什么 BFS 可以找到最短距离，DFS 不行吗？**
+
+首先，BFS 的逻辑，depth 每增加一次，队列中的所有节点都向前迈一步，这保证了第一次到达终点时，走的步数是最少的。
+
+DFS 找最短路径，时间复杂度相对高很多，DFS 实际上是靠递归的堆栈记录走过的路径，若想找到最短路径，肯定需要把二叉树中所有树杈都搜索完才能对比得出最短的路径，而 BFS 借助队列做到一次一步【齐头并进】，是可以在不遍历完整树的条件下找到最短距离。
+
+**2.BFS 的优势，为什么 DFS 还要存在？**
+
+BFS 可以找到最短距离，但是空间复杂度高，而 DFS 空间复杂度较低。
+
+以二叉树问题为例，假设给你的这个二叉树是满二叉树，节点数为 N，对 DFS 算法来说，空间复杂度无非就是递归堆栈，最坏情况下顶多就是树的高度，即 O(logN).
+
+BFS 算法，队列中每次都会储存着二叉树一层的节点，这样的话最坏情况下空间复杂度应该是树的最底层节点的数量，也就是 N/2，用 Big O 表示的话就是 O(N)
+
+BFS 一般是在找最短路径时使用 BFS，其他时候还是 DFS 使用得多一些（主要是递归代码好写）
+
+## 揭开密码锁的最少次数
+
+```typescript
+// 0-9是个数字，自由旋转，初始数字是0000；deadends：一旦数字和列表里的任何一个元素形同就会永久锁定
+```
+
+每个节点有 8 个相邻的节点，让你求最短距离，即典型额 BFS，先写框架代码：
+
+```typescript
+function moveOne(s: string, index: number, directioin: 1 | -1) {
+  const targetStr = s[index];
+  let finalStr;
+  if (direction === 1) {
+    finalStr = targetStr === "9" ? "0" : targetStr + 1;
+  } else {
+    finalStr = targetStr === "0" ? "9" : targetStr - 1;
+  }
+}
+
+// bfs框架，打印出所有可能的密码
+function bfs(target: string) {
+  const q = [];
+  q.push("0000");
+
+  while (q.length > 0) {
+    let len = q.length;
+    // 将当前队列中的所有节点向周围扩散
+    for (let i = 0; i < len; i++) {
+      let cur = q.shift();
+
+      // 判断是否到达终点
+      // ...
+
+      // 将一个节点的相邻节点加入队列
+      for (let j = 0; j < 4; j++) {
+        let up = moveOne(cur, j, 1);
+        let down = moveOne(cur, j, -1);
+        q.push(up);
+        q.push(down);
+      }
+    }
+    // 增加步数
+    // ...
+  }
+  return;
+}
+```
+
+上述代码框架还有以下问题需要解决：
+
+- 1.会走回头路，比如我们从‘0000’拨到‘1000’，但是等从队列拿出’1000‘时，还会拨出一个’0000‘，这样的话就会产生死循环。
+
+- 2.没有终止条件，按照题目要求，我们找到 target 就应该结束并返回拨动的次数
+
+- 3.没有对 deadends 的处理
+
+优化后的代码：
+
+```typescript
+function openLock(deadends: string[], target: string) {
+  // 记录需要跳过的死亡密码
+  const deads = new Set();
+  deadends.forEach((end) => {
+    deads.add(end);
+  });
+  // 记录已经穷举过的密码，防止重复
+  const visited = new Set();
+  const q = [];
+  // 从起点开始启动广度优先搜索
+  let step = 0;
+  q.push("0000");
+  visited.add("0000");
+
+  while (q.length > 0) {
+    let len = q.length;
+    // 将当前队列中的所有节点向周围扩散
+    for (let i = 0; i < q; i++) {
+      let cur = q.shift();
+
+      // 判断是否到达终点
+      if (deads.contains(cur)) continue;
+      if (cur === target) return step;
+
+      // 将一个节点的未遍历相邻节点加入队列
+      for (let j = 0; j < 4; j++) {
+        let up = moveOne(cur, j, 1);
+        if (!visited.contains(up)) {
+          q.push(up);
+          visited.add(up);
+        }
+        let down = moveOne(cur, j, -1);
+        if (!visited.contains(down)) {
+          q.push(down);
+          visited.add(down);
+        }
+      }
+    }
+    // 增加步数
+    step++;
+  }
+  return -1;
+}
+```
+
+## 双向 BFS 优化
+
+**传统的 BFS 框架就是从起点开始想四周扩散，遇到终点时停止，而双向 BFS 则是从起点和终点同时开始扩散，当两边有交集的时候停止**，从复杂度看，虽然最坏复杂度都是 O(N),但是双向 BFS 优化只需要遍历半棵树。
+
+**双向 BFS 的局限性在于你必须知道终点在哪里**，对比上述两个例子，二叉树最小高度问题，不知道终点在哪里，就无法使用双向 BFS；但是第二个密码锁的问题，是可以用双向 BFS 算法来提高效率的。
+
+```typescript
+function openLock(deadends: string[], target: string) {
+  // 记录需要跳过的死亡密码
+  const deads = new Set();
+  deadends.forEach((end) => {
+    deads.add(end);
+  });
+  // 记录已经穷举过的密码，防止重复
+  const visited = new Set();
+  const q1 = new Set();
+  const q2 = new Set();
+  // 从起点开始启动广度优先搜索
+  let step = 0;
+  q1.add("0000");
+  q2.add(target);
+
+  while (!q1.isEmpty() && !q2.isEmpty()) {
+    let temp = new Set();
+    let len = q.length;
+    // 将当前队列中的所有节点向周围扩散
+    for (let cur of q1) {
+      // 判断是否到达终点
+      if (deads.contains(cur)) continue;
+      if (q2.contains(cur)) return step;
+
+      visited.add(cur);
+
+      // 将一个节点的未遍历相邻节点加入队列
+      for (let j = 0; j < 4; j++) {
+        let up = moveOne(cur, j, 1);
+        if (!visited.contains(up)) {
+          temp.add(up);
+        }
+        let down = moveOne(cur, j, -1);
+        if (!visited.contains(down)) {
+          temp.add(down);
+        }
+      }
+    }
+    // 增加步数
+    step++;
+    // temp 相当于q1
+    // 这里交换q1 q2，下一轮while就是扩散q2
+    q1 = q2;
+    q2 = temp;
+  }
+  return -1;
+}
+```
+
+双向 BFS 还是遵循 BFS 算法框架的，只是**不再使用队列，还是 Set 方面快速判断两个集合是否有交集**。
+
+另一个点就是**while 循环的最后交换 q1 和 q2 的内容，所以只要默认扩散 q1 就相当于轮流扩散 q1 和 q2**
