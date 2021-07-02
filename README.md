@@ -141,7 +141,7 @@
 [懒加载和预加载](./blogs/页面性能与安全/懒加载和预加载.md)  
 [XSS 与 CSRF](./blogs/页面性能与安全/XSS与CSRF.md)
 
-## 数据结构
+## 数据结构简介
 
 [九种排序算法](./blogs/数据结构及算法/九种排序算法.md)  
 [栈与队列](./blogs/数据结构及算法/栈与队列.md)  
@@ -155,3 +155,64 @@
 
 [前端实时下载](./blogs/应用/前端实时下载.md)  
 [util](./blogs/应用/util.md)
+
+## algorithm
+
+### 框架思维
+
+[思维与框架](./blogs/algorithm/框架思维/思维与框架.md)  
+[动态规划解题框架](./blogs/algorithm/框架思维/动态规划解题框架.md)  
+[回溯算法解题框架](./blogs/algorithm/框架思维/回溯算法解题框架.md)  
+[BFS 算法解题框架](./blogs/algorithm/框架思维/BFS算法解题框架.md)  
+[二分搜索解题框架](./blogs/algorithm/框架思维/二分搜索解题框架.md)  
+[滑动窗口算法解题框架](./blogs/algorithm/框架思维/滑动窗口算法解题框架.md)  
+[股票买卖解题框架](./blogs/algorithm/框架思维/股票买卖解题框架.md)  
+[打家劫舍解题框架](./blogs/algorithm/框架思维/打家劫舍解题框架.md)  
+[区间问题解题框架](./blogs/algorithm/框架思维/区间问题解题框架.md)  
+[nSum 问题解题框架](./blogs/algorithm/框架思维/nSum问题解题框架.md)
+
+### 数据结构
+
+- 链表
+
+  - [递归反转链表的一部分](./blogs/algorithm/数据结构/二叉树/递归反转链表的一部分.md)
+  - [如何 K 个一组反转一个链表](./blogs/algorithm/数据结构/二叉树/如何K个一组反转一个链表.md)
+  - [如何判断回文链表](./blogs/algorithm/数据结构/二叉树/如何判断回文链表.md)
+
+- 二叉树
+
+  - [二叉树](./blogs/algorithm/数据结构/二叉树/二叉树.md)
+  - [二叉树搜索](./blogs/algorithm/数据结构/二叉树/二叉树搜索.md)
+  - [关于图的算法](./blogs/algorithm/数据结构/二叉树/关于图的算法.md)
+  - [后序遍历二叉树](./blogs/algorithm/数据结构/二叉树/后序遍历二叉树.md)
+  - [二叉树序列化](./blogs/algorithm/数据结构/二叉树/二叉树序列化.md)
+  - [迭代器](./blogs/algorithm/数据结构/二叉树/迭代器.md)
+  - [二叉树最近公共父节点](./blogs/algorithm/数据结构/二叉树/二叉树最近公共父节点.md)
+  - [二叉树节点数](./blogs/algorithm/数据结构/二叉树/二叉树节点数.md)
+
+- 设计数据结构
+
+  - [LRU 和 LFU 算法](./blogs/algorithm/数据结构/设计数据结构/LRU和LFU算法.md)
+  - [最大频率栈](./blogs/algorithm/数据结构/设计数据结构/最大频率栈.md)
+  - [数据流中位数](./blogs/algorithm/数据结构/设计数据结构/数据流中位数.md)
+  - [推特数据结构](./blogs/algorithm/数据结构/设计数据结构/推特数据结构.md)
+  - [单调栈结构](./blogs/algorithm/数据结构/设计数据结构/单调栈结构.md)
+  - [单调队列结构](./blogs/algorithm/数据结构/设计数据结构/单调队列结构.md)
+  - [二叉堆](./blogs/algorithm/数据结构/设计数据结构/二叉堆.md)
+  - [队列、栈的互相实现](./blogs/algorithm/数据结构/设计数据结构/队列、栈的互相实现.md)
+
+- 数组
+
+  - [二分查找](./blogs/algorithm/数据结构/数组/二分查找.md)
+  - [二分查找优化算法效率](./blogs/algorithm/数据结构/数组/二分查找优化算法效率.md)
+  - [双指针](./blogs/algorithm/数据结构/数组/双指针.md)
+  - [滑动窗口算法解题框架](./blogs/algorithm/框架思维/滑动窗口算法解题框架.md)
+  - [查找删除数组任意元素](./blogs/algorithm/数据结构/数组/查找删除数组任意元素.md)
+  - [原地修改数组](./blogs/algorithm/数据结构/数组/原地修改数组.md)
+  - [无序数组 twoSum](./blogs/algorithm/数据结构/数组/无序数组twoSum.md)
+
+### 动态规划
+
+- 基本技巧
+
+  - [动态规划解题框架](./blogs/algorithm/框架思维/动态规划解题框架.md)
