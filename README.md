@@ -216,3 +216,47 @@
 - 基本技巧
 
   - [动态规划解题框架](./blogs/algorithm/框架思维/动态规划解题框架.md)
+  - [base case 和备忘录的初始值](./blogs/algorithm/动态规划/基本技巧/basecase和备忘录的初始值.md)
+  - [状态压缩](./blogs/algorithm/动态规划/基本技巧/状态压缩.md)
+  - [动态规划与回溯算法](./blogs/algorithm/动态规划/基本技巧/动态规划与回溯算法.md)
+
+- 子序列问题
+
+  - [编辑距离](./blogs/algorithm/动态规划/子序列问题/编辑距离.md)
+  - [最长递增子序列](./blogs/algorithm/动态规划/子序列问题/最长递增子序列.md)
+  - [二维递增子序列](./blogs/algorithm/动态规划/子序列问题/二维递增子序列.md)
+  - [最大子数组](./blogs/algorithm/动态规划/子序列问题/最大子数组.md)
+  - [最长公共子序列](./blogs/algorithm/动态规划/子序列问题/最长公共子序列.md)
+  - [子序列问题模板-最长回文子序列](./blogs/algorithm/动态规划/子序列问题/子序列问题模板-最长回文子序列.md)
+
+- 背包类型问题
+
+  - [0-1 背包问题](./blogs/algorithm/动态规划/背包类型问题/0-1背包问题.md)
+  - [子集背包问题](./blogs/algorithm/动态规划/背包类型问题/子集背包问题.md)
+  - [完全背包问题](./blogs/algorithm/动态规划/背包类型问题/完全背包问题.md)
+
+- 贪心类型问题
+
+  - [区间调度问题](./blogs/algorithm/动态规划/贪心类型问题/区间调度问题.md)
+  - [贪心思想玩跳跃游戏](./blogs/algorithm/动态规划/贪心类型问题/贪心思想玩跳跃游戏.md)
+
+- 动态规划玩游戏
+
+  - [最小路径和](./blogs/algorithm/动态规划/动态规划玩游戏/最小路径和.md)
+  - [魔塔](./blogs/algorithm/动态规划/动态规划玩游戏/魔塔.md)
+  - [正则表达式匹配](./blogs/algorithm/动态规划/动态规划玩游戏/正则表达式匹配.md)
+  - [高楼扔鸡蛋](./blogs/algorithm/动态规划/动态规划玩游戏/高楼扔鸡蛋.md)
+  - [戳气球](./blogs/algorithm/动态规划/动态规划玩游戏/戳气球.md)
+  - [博弈问题](./blogs/algorithm/动态规划/动态规划玩游戏/博弈问题.md)
+  - [四键键盘](./blogs/algorithm/动态规划/动态规划玩游戏/四键键盘.md)
+  - [股票买卖解题框架](./blogs/algorithm/框架思维/股票买卖解题框架.md)
+  - [打家劫舍解题框架](./blogs/algorithm/框架思维/打家劫舍解题框架.md)
+  - [KMP 字符匹配](./blogs/algorithm/动态规划/动态规划玩游戏/KMP字符匹配.md)
+  - [构造回文的最小插入次数](./blogs/algorithm/动态规划/动态规划玩游戏/构造回文的最小插入次数.md)
+
+### 算法技巧
+
+- 回溯算法（DFS 算法）
+
+  - [BFS 算法解题框架](./blogs/algorithm/框架思维/BFS算法解题框架.md)
+  - [集合划分问题](./blogs/algorithm/算法技巧/回溯算法_DFS算法/集合划分问题.md)
