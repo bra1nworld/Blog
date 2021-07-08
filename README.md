@@ -258,5 +258,35 @@
 
 - 回溯算法（DFS 算法）
 
-  - [BFS 算法解题框架](./blogs/algorithm/框架思维/BFS算法解题框架.md)
+  - [回溯算法解题框架](./blogs/algorithm/框架思维/回溯算法解题框架.md)
   - [集合划分问题](./blogs/algorithm/算法技巧/回溯算法_DFS算法/集合划分问题.md)
+  - [排列、组合、子集](./blogs/algorithm/算法技巧/回溯算法_DFS算法/排列、组合、子集.md)
+  - [数独](./blogs/algorithm/算法技巧/回溯算法_DFS算法/数独.md)
+  - [括号生成](./blogs/algorithm/算法技巧/回溯算法_DFS算法/括号生成.md)
+
+- BFS 算法
+
+  - [BFS 算法解题框架](./blogs/algorithm/框架思维/BFS算法解题框架.md)
+  - [拼图游戏](./blogs/algorithm/算法技巧/BFS算法/拼图游戏.md)
+
+- 数学运算技巧
+
+  - [常用位操作](./blogs/algorithm/算法技巧/数学运算技巧/常用位操作.md)
+  - [阶乘算法题](./blogs/algorithm/算法技巧/数学运算技巧/阶乘算法题.md)
+  - [寻找质数](./blogs/algorithm/算法技巧/数学运算技巧/寻找质数.md)
+  - [模幂运算](./blogs/algorithm/算法技巧/数学运算技巧/模幂运算.md)
+  - [查找缺失和重复元素](./blogs/algorithm/算法技巧/数学运算技巧/查找缺失和重复元素.md)
+  - [无限序列随机抽取元素](./blogs/algorithm/算法技巧/数学运算技巧/无限序列随机抽取元素.md)
+  - [去除有序数组的重复元素](./blogs/algorithm/数据结构/数组/原地修改数组.md)
+  - [脑筋急转弯](./blogs/algorithm/算法技巧/数学运算技巧/脑筋急转弯.md)
+
+- 其他算法技巧
+
+  - [前缀和数组](./blogs/algorithm/算法技巧/其他算法技巧/前缀和数组.md)
+  - [差分数组](./blogs/algorithm/算法技巧/其他算法技巧/差分数组.md)
+  - [快速选择](./blogs/algorithm/算法技巧/其他算法技巧/快速选择.md)
+  - [分治算法](./blogs/algorithm/算法技巧/其他算法技巧/分治算法.md)
+
+### 高频试题
+
+- [斗地主](./blogs/algorithm/高频试题/斗地主.md)
