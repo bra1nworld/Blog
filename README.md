@@ -290,3 +290,13 @@
 ### 高频试题
 
 - [斗地主](./blogs/algorithm/高频试题/斗地主.md)
+- [分葡萄](./blogs/algorithm/高频试题/分葡萄.md)
+- [烧饼排序](./blogs/algorithm/高频试题/烧饼排序.md)
+- [字符串相乘](./blogs/algorithm/高频试题/字符串相乘.md)
+- [实现一个计算器](./blogs/algorithm/高频试题/实现一个计算器.md)
+- [接雨水](./blogs/algorithm/高频试题/接雨水.md)
+- [寻找最长回文子串](./blogs/algorithm/高频试题/寻找最长回文子串.md)
+- [括号相关问题](./blogs/algorithm/高频试题/括号相关问题.md)
+- [判断完美矩形](./blogs/algorithm/高频试题/判断完美矩形.md)
+- [考场就座](./blogs/algorithm/高频试题/考场就座.md)
+- [二分查找判定子序列](./blogs/algorithm/高频试题/二分查找判定子序列.md)
