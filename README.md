@@ -104,7 +104,7 @@
 
 - 状态更新
 
-  - [状态更新](./blogs/react源码学习/状态更新/状态更新.md)
+  - [流程概览](./blogs/react源码学习/状态更新/流程概览.md)
   - [update 的心智模型](./blogs/react源码学习/状态更新/update的心智模型.md)
   - [update 结构与工作流程](./blogs/react源码学习/状态更新/update结构与工作流程.md)
   - [深入理解优先级](./blogs/react源码学习/状态更新/深入理解优先级.md)
