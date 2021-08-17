@@ -186,7 +186,7 @@ function openLock(deadends: string[], target: string) {
       let cur = q.shift();
 
       // 判断是否到达终点
-      if (deads.contains(cur)) continue;
+      if (deads.has(cur)) continue;
       if (cur === target) return step;
 
       // 将一个节点的未遍历相邻节点加入队列
@@ -238,19 +238,19 @@ function openLock(deadends: string[], target: string) {
     // 将当前队列中的所有节点向周围扩散
     for (let cur of q1) {
       // 判断是否到达终点
-      if (deads.contains(cur)) continue;
-      if (q2.contains(cur)) return step;
+      if (deads.has(cur)) continue;
+      if (q2.has(cur)) return step;
 
       visited.add(cur);
 
       // 将一个节点的未遍历相邻节点加入队列
       for (let j = 0; j < 4; j++) {
         let up = moveOne(cur, j, 1);
-        if (!visited.contains(up)) {
+        if (!visited.has(up)) {
           temp.add(up);
         }
         let down = moveOne(cur, j, -1);
-        if (!visited.contains(down)) {
+        if (!visited.has(down)) {
           temp.add(down);
         }
       }

@@ -102,8 +102,8 @@ function reverseKGroup(head: ListNode, k: number) {
 
 for 循环之后的代码，reverse 函数是反转区间[a,b),所以如下：
 
-![链表8](../../resource/blogs/images/algorithm/链表8.png)
+![链表8](../../../../resource/blogs/images/algorithm/链表8.png)
 
 函数递归完成之后的结果：
 
-![链表9](../../resource/blogs/images/algorithm/链表9.png)
+![链表9](../../../../resource/blogs/images/algorithm/链表9.png)
