@@ -289,7 +289,7 @@
 
 ### 高频试题
 
-- [斗地主](./blogs/algorithm/高频试题/斗地主.md)
+- [斗地主](./blogs/algorithm/高频试题/凑连续子序列.md)
 - [分葡萄](./blogs/algorithm/高频试题/分葡萄.md)
 - [烧饼排序](./blogs/algorithm/高频试题/烧饼排序.md)
 - [字符串相乘](./blogs/algorithm/高频试题/字符串相乘.md)
