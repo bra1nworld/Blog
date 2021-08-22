@@ -2089,3 +2089,243 @@ function diffWaysToCompute(input: string) {
     return res;
   }
 }
+
+function isPossible(nums: number[]) {
+  let freq = new Map();
+  let need = new Map();
+  for (const num of nums) {
+    freq[num] = freq.has(num) ? freq.get(num) + 1 : 1;
+  }
+
+  for (const num of nums) {
+    if (freq[num] === 0) continue;
+
+    if (need.has(num)) {
+      freq[num]--;
+      need[num]--;
+      need[num + 1]++;
+    } else if (freq[num] > 0 && freq[num + 1] > 0 && freq[num + 2] > 0) {
+      freq[num]--;
+      freq[num + 1]--;
+      freq[num + 2]--;
+      freq[num + 3]++;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+function solution(a: number, b: number, c: number) {
+  let arr = [a, b, c];
+  arr.sort();
+  let sum = a + b + c;
+  if (arr[0] + arr[1] > arr[2]) {
+    return Math.ceil((sum + 2) / 3);
+  } else if ((arr[0] + arr[1]) / 2 < arr[2]) {
+    return Math.ceil((arr[2] + 1) / 2);
+  } else {
+    return Math.ceil((sum + 2) / 3);
+  }
+}
+
+function pancake(nums: number[]) {
+  let res = [];
+  sort(nums, nums.length);
+  return res;
+
+  function sort(nums, n) {
+    if (n == 1) return;
+
+    let maxCake = 0;
+    let maxCakeIndex = 0;
+
+    for (let i = 0; i < n; i++) {
+      if (nums[i] > maxCake) {
+        maxCake = nums[i];
+        maxCakeIndex = i;
+      }
+    }
+
+    reverse(nums, 0, maxCakeIndex);
+    res.push(maxCakeIndex + 1);
+
+    reverse(nums, 0, n - 1);
+    res.push(n);
+
+    sort(nums, n - 1);
+  }
+
+  function reverse(nums, a, b) {
+    return [
+      ...nums.slice(0, a),
+      ...nums.slice(a, b + 1).reverse(),
+      ...nums.slice(b + 1),
+    ];
+  }
+}
+
+function calculate(str: string) {
+  function helper(s: string) {
+    let stack = [];
+    let num = 0;
+    let sign = "+";
+    while (s.length > 0) {
+      let first = s[0];
+      s = s.slice(1);
+
+      if (!isNaN(Number(first))) {
+        num = num * 10 + Number(first);
+      }
+
+      if (first == "(") {
+        num = helper(s);
+      }
+
+      if ((isNaN(Number(first)) && first !== "") || s.length == 0) {
+        switch (sign) {
+          case "+":
+            stack.push(num);
+            break;
+          case "-":
+            stack.push(-num);
+            break;
+          case "*":
+            stack[stack.length - 1] = stack[stack.length - 1] * num;
+            break;
+          case "/":
+            stack[stack.length - 1] = stack[stack.length - 1] / num;
+            break;
+          default:
+            break;
+        }
+        sign = first;
+        num = 0;
+      }
+
+      if (first == ")") {
+        break;
+      }
+    }
+    return stack.reduce((r, v) => r + v);
+  }
+
+  return helper(str);
+}
+
+function trip(nums: number[]) {
+  if (nums.length == 0) return 0;
+  let n = nums.length;
+  let res = 0;
+
+  let lh: number[] = Array.from({ length: n });
+  let rh: number[] = Array.from({ length: n });
+
+  lh[0] = nums[0];
+  rh[n - 1] = nums[n - 1];
+
+  for (let i = 0; i < n; i++) {
+    lh[i] = Math.max(lh[i - 1], nums[i]);
+  }
+
+  for (let j = n - 1; j >= 0; j--) {
+    rh[j] = Math.max(rh[j + 1], nums[j]);
+  }
+
+  for (let k = 0; k < n; k++) {
+    res += Math.min(lh[k], rh[k]) - nums[k];
+  }
+  return res;
+}
+
+function longestPalindrome(str) {
+  let res;
+  for (let i = 0; i < str.length; i++) {
+    const s = str[i];
+    let s1 = palindrome(str, i, i);
+    let s2 = palindrome(str, i, i + 1);
+    res = res.length > s1.length ? res : s1;
+    res.res.length > s2.length ? res : s2;
+  }
+  return res;
+
+  function palindrome(str, l, r) {
+    while (l >= 0 && r < str.length && str[l] == str[r]) {
+      l--;
+      r++;
+    }
+    return str.slice(l, r + 1);
+  }
+}
+
+function isValiddd(str: string) {
+  let obj = {
+    "}": "{",
+    "]": "[",
+    ")": "(",
+  };
+  let stack = [];
+
+  for (let i = 0; i < str.length; i++) {
+    const s = str[i];
+    if (["{", "[", "("].includes(s)) {
+      stack.push(s);
+    } else {
+      if (obj[s] == stack[stack.length - 1]) {
+        stack.pop();
+      } else {
+        return false;
+      }
+    }
+  }
+  return stack.length == 0;
+}
+
+function isRectangleCover(reactangles: number[][]) {
+  let X1, Y1, X2, Y2;
+  let area = 0;
+  let points = new Set();
+
+  for (const [x1, y1, x2, y2] of reactangles) {
+    X1 = Math.min(x1, X1);
+    X2 = Math.min(x2, X2);
+    Y1 = Math.min(y1, Y1);
+    Y2 = Math.min(y2, Y2);
+    area += (x2 - x1) * (y2 - y1);
+
+    let p1 = `${x1}-${y1}`;
+    let p2 = `${x1}-${y2}`;
+    let p3 = `${x2}-${y1}`;
+    let p4 = `${x2}-${y2}`;
+    for (const p of [p1, p2, p3, p4]) {
+      if (points.has(p)) {
+        points.delete(p);
+      } else {
+        points.add(p);
+      }
+    }
+  }
+
+  const except_area = (X2 - X1) * (Y2 - Y1);
+
+  if (except_area != area) return false;
+
+  if (points.size != 4) return false;
+
+  if (!points.has(`${X1}-${Y1}`)) return false;
+  if (!points.has(`${X1}-${Y2}`)) return false;
+  if (!points.has(`${X2}-${Y1}`)) return false;
+  if (!points.has(`${X2}-${Y2}`)) return false;
+
+  return true;
+}
+
+function isSubStr(s, t) {
+  let i = 0,
+    j = 0;
+  while (i < s.length && j < s.length) {
+    if (s[i] == t[j]) i++;
+    j++;
+  }
+  return i == t.length;
+}
