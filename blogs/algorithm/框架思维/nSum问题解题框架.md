@@ -9,7 +9,7 @@
 
 function twoSum(nums: number[], target: number) {
   // 先对数组排序
-  nums.sort();
+  nums.sort((a, b) => a - b);
 
   // 左右指针
   let left = 0,
@@ -113,6 +113,41 @@ function threeSumTarget(nums,target){
         // 跳过第一个数字重复的情况，否则会出现重复结果
         while(i<n-1 && nums[i] == nums[i+1]) i++
     }
+}
+```
+
+三数之和等于 0：
+
+```typescript
+function threeSum(nums:number[],target:number){
+  let ans=[];
+  let l=nums.length;
+  if(nums== null || nums.length<3) return res;
+  nums.sort((a,b)=>a-b);
+
+  for(let i =0;i<l;i++){
+    if(i>0) return break;
+    if(i>0 && nums[i]==nums[i-1]) continue;
+
+    let L=i+1;
+    let R=l-1;
+    while(L<R){
+      let sum=nums[i]+nums[L]+nums[R];
+      if(sum ==0){
+        ans.push(nums[i],nums[L],nums[R]);
+
+        while(L<R && nums[L]==nums[L+1]) L++;
+        while(L<R && nums[R]==nums[R-1]) R--;
+        L++;
+        R--;
+
+      }else if(sum <0){
+        L++;
+      }else if(sum>0){
+        R--;
+      }
+    }
+  }
 }
 ```
 
