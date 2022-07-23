@@ -84,7 +84,7 @@ document.getElementById('list').addEventListener('click', function (e) {
 
 * **event.prevertDefault()**
 
-**如果调用这个方法，默认的事件行为将不再触发**，例如表单点击提交按钮（submit）跳转页面，a标签默认也哦面跳转或者锚点定位等  
+**如果调用这个方法，默认的事件行为将不再触发**，例如表单点击提交按钮（submit）跳转页面，a标签默认也有跳转或者锚点定位等  
 a标签实现一个普通的按钮，不跳转，不锚点定位
 
 ```javascript
