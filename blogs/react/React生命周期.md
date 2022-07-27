@@ -8,13 +8,13 @@
 
 ### Hooks组件替代类组件的方式
 
-- constructor：函数组件不需要构造函数，我们可以通过调用useState来初始化state，如果计算比较麻烦，可以传一个函数给useState。
+- **constructor：** 函数组件不需要构造函数，我们可以通过调用useState来初始化state，如果计算比较麻烦，可以传一个函数给useState。
 
     ```javascript
     const [num,UpdateNum]=useState[0]
     ```
 
-- getDerivedStateFromProps:一般情况下用不到这个函数，可以在**渲染过程中更新state**，以达到实现getDerivedStateFromProps的目的
+- **getDerivedStateFromProps:** 一般情况下用不到这个函数，可以在**渲染过程中更新state**，以达到实现getDerivedStateFromProps的目的
 
     ```javascript
     function scrillView({row}){
@@ -30,9 +30,9 @@
     }
     ```
 
-React会立即退出第一次渲染并用更新后的state重新运行组件以避免耗费太多性能
+    React会立即退出第一次渲染并用更新后的state重新运行组件以避免耗费太多性能
 
-- shouldConponentUpdate: 可以用React.memo包裹一个组件来对它的props进行浅比较
+- **shouldConponentUpdate:**  可以用React.memo包裹一个组件来对它的props进行浅比较
     ```javascript
     const Button=React.memo((props)=>{
         //具体的组件
@@ -41,7 +41,7 @@ React会立即退出第一次渲染并用更新后的state重新运行组件以�
 
     注意：**React.memo等效于PureComponent**，它只浅比较props。这里也可以使用useMemo优化每一个节点
 
--  render：函数组件体本身
+-  **render：** 函数组件体本身
 
 -  **componentDidMount,componentDidUpdate:** useLayoutEffect与他们两的调用阶段是一样的。推荐**一开始使用useEffect**，只有当它出问题的时候再尝试使用useLayoutEffect。useEffect可以表达所有这些的组合
     ```javascript
@@ -62,7 +62,7 @@ React会立即退出第一次渲染并用更新后的state重新运行组件以�
 
     **React会等待浏览器完成画面渲染之后才会延迟调用useEffect，因此会使得额外操作很方便**。
 
--  componentWillUnmount:相当于useEffect里面重返回的cleanup函数
+-  **componentWillUnmount:** 相当于useEffect里面重返回的cleanup函数
 
     ```javascript
     //componentDidMount/componnetWillUnmount
@@ -74,7 +74,7 @@ React会立即退出第一次渲染并用更新后的state重新运行组件以�
     }.[])
     ```
 
-    * componentDidCatch 和 getDerivedStateFromError:目前还没有这些方法的hook等价写法，但很快会加上
+    componentDidCatch 和 getDerivedStateFromError:目前还没有这些方法的hook等价写法，但很快会加上
 
 | class组件 | hooks组件 |
 | - | - |
