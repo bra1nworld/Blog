@@ -8,75 +8,73 @@
 
 ### Hooks组件替代类组件的方式
 
-* constructor：函数组件不需要构造函数，我们可以通过调用useState来初始化state，如果计算比较麻烦，可以传一个函数给useState。
+- constructor：函数组件不需要构造函数，我们可以通过调用useState来初始化state，如果计算比较麻烦，可以传一个函数给useState。
 
-```javascript
-const [num,UpdateNum]=useState[0]
-```
+    ```javascript
+    const [num,UpdateNum]=useState[0]
+    ```
 
-* getDerivedStateFromProps:一般情况下用不到这个函数，可以在**渲染过程中更新state**，以达到实现getDerivedStateFromProps的目的
+- getDerivedStateFromProps:一般情况下用不到这个函数，可以在**渲染过程中更新state**，以达到实现getDerivedStateFromProps的目的
 
-```javascript
-function scrillView({row}){
-    let [isScrollingDown,setIsScrollingDown]=useState(false);
-    let [prevRow,setPrevRow]=useState(null);
+    ```javascript
+    function scrillView({row}){
+        let [isScrollingDown,setIsScrollingDown]=useState(false);
+        let [prevRow,setPrevRow]=useState(null);
 
-    if(row !== prevRow){
-        setIsScrollingDown(prevRow!==null && row>prevRow);
-        setPrevRow(row)
+        if(row !== prevRow){
+            setIsScrollingDown(prevRow!==null && row>prevRow);
+            setPrevRow(row)
+        }
+
+        return `Scrolling down:${isScrollingDown}`
     }
-
-    return `Scrolling down:${isScrollingDown}`
-}
-```
+    ```
 
 React会立即退出第一次渲染并用更新后的state重新运行组件以避免耗费太多性能
 
-* shouldConponentUpdate: 可以用React.memo包裹一个组件来对它的props进行浅比较
+- shouldConponentUpdate: 可以用React.memo包裹一个组件来对它的props进行浅比较
+    ```javascript
+    const Button=React.memo((props)=>{
+        //具体的组件
+    })
+    ```
 
-```javascript
-const Button=React.memo((props)=>{
-    //具体的组件
-})
-```
+    注意：**React.memo等效于PureComponent**，它只浅比较props。这里也可以使用useMemo优化每一个节点
 
-注意：**React.memo等效于PureComponent**，它只浅比较props。这里也可以使用useMemo优化每一个节点
+-  render：函数组件体本身
 
-* render：函数组件体本身
+-  **componentDidMount,componentDidUpdate:** useLayoutEffect与他们两的调用阶段是一样的。推荐**一开始使用useEffect**，只有当它出问题的时候再尝试使用useLayoutEffect。useEffect可以表达所有这些的组合
+    ```javascript
+    // componentDidMount
+    useEffect(()=>{
+      // 需要在 componentDidMount 执行的内容
+    }, [])
 
-* **componentDidMount,componentDidUpdate:** useLayoutEffect与他们两的调用阶段是一样的。推荐**一开始使用useEffect**，只有当它出问题的时候再尝试使用useLayoutEffect。useEffect可以表达所有这些的组合
+    useEffect(() => {
+      // 在 componentDidMount，以及 count 更改时 componentDidUpdate 执行的内容
+      document.title = `You clicked ${count} times`;
+      return () => {
+        // 需要在 count 更改时 componentDidUpdate（先于 document.title = ... 执行，遵守先清理后更新）
+        // 以及 componentWillUnmount 执行的内容
+      } // 当函数中 Cleanup 函数会按照在代码中定义的顺序先后执行，与函数本身的特性无关
+    }, [count]); // 仅在 count 更改时更新
+    ```
 
-```javascript
-// componentDidMount
-useEffect(()=>{
-  // 需要在 componentDidMount 执行的内容
-}, [])
+    **React会等待浏览器完成画面渲染之后才会延迟调用useEffect，因此会使得额外操作很方便**。
 
-useEffect(() => {
-  // 在 componentDidMount，以及 count 更改时 componentDidUpdate 执行的内容
-  document.title = `You clicked ${count} times`;
-  return () => {
-    // 需要在 count 更改时 componentDidUpdate（先于 document.title = ... 执行，遵守先清理后更新）
-    // 以及 componentWillUnmount 执行的内容
-  } // 当函数中 Cleanup 函数会按照在代码中定义的顺序先后执行，与函数本身的特性无关
-}, [count]); // 仅在 count 更改时更新
-```
+-  componentWillUnmount:相当于useEffect里面重返回的cleanup函数
 
-**React会等待浏览器完成画面渲染之后才会延迟调用useEffect，因此会使得额外操作很方便**。
+    ```javascript
+    //componentDidMount/componnetWillUnmount
+    useEffect(()=>{
+        //需要在componenntDidMount执行的内容
+        return function cleanup(){
+            //需要在componentWillUnmount里执行的内容
+        }
+    }.[])
+    ```
 
-* componentWillUnmount:相当于useEffect里面重返回的cleanup函数
-
-```javascript
-//componentDidMount/componnetWillUnmount
-useEffect(()=>{
-    //需要在componenntDidMount执行的内容
-    return function cleanup(){
-        //需要在componentWillUnmount里执行的内容
-    }
-}.[])
-```
-
-* componentDidCatch 和 getDerivedStateFromError:目前还没有这些方法的hook等价写法，但很快会加上
+    * componentDidCatch 和 getDerivedStateFromError:目前还没有这些方法的hook等价写法，但很快会加上
 
 | class组件 | hooks组件 |
 | - | - |
