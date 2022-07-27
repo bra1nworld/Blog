@@ -3,7 +3,7 @@
 ## Hooks组件
 
 **函数组件**的本质是函数，没有state的概念的，因此**不存在生命周期**一说，仅仅是一个**render函数**而已  
-但是引入Hooks之后就不同可，它能让组件在不实用class的情况下使用state以及其他的React特性，相比与class的生命周期概念来说，它更接近于实现状态同步，而不是响应生命周期。但是我们可以利用useState,useEffect()和useLayoutEffect()来模拟实现生命周期。  
+但是引入Hooks之后就不同了，它能让组件在不使用class的情况下使用state以及其他的React特性，相比与class的生命周期概念来说，它更接近于实现状态同步，而不是响应生命周期。但是我们可以利用useState,useEffect()和useLayoutEffect()来模拟实现生命周期。  
 即：**Hooks组件更接近于实现状态同步，而不是响应生命周期事件**
 
 * constructor：函数组件不需要构造函数，我们可以通过调用useState来初始化state，如果计算比较麻烦，可以传一个函数给useState。
