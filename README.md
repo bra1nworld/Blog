@@ -144,12 +144,12 @@
 ## 数据结构简介
 
 [九种排序算法](./blogs/数据结构/九种排序算法.md)  
-[栈与队列](./blogs/数据结构/栈与队列.md)  
-[链表](./blogs/数据结构/链表.md)  
-[集合](./blogs/数据结构/集合.md)  
-[字典](./blogs/数据结构/字典.md)  
-[树](./blogs/数据结构/树.md)  
-[搜索](./blogs/数据结构/搜索.md)
+[栈与队列 P0](./blogs/数据结构/栈与队列.md)  
+[链表 P0](./blogs/数据结构/链表.md)  
+[集合 P0](./blogs/数据结构/集合.md)  
+[字典 P0](./blogs/数据结构/字典.md)  
+[树 P0](./blogs/数据结构/树.md)  
+[搜索 P0](./blogs/数据结构/搜索.md)
 
 ## 应用
 
@@ -160,26 +160,26 @@
 
 ### 框架思维
 
-[思维与框架p0](./blogs/algorithm/框架思维/思维与框架.md)  
-[动态规划解题框架p0](./blogs/algorithm/框架思维/动态规划解题框架.md)  
-[回溯算法解题框架p0](./blogs/algorithm/框架思维/回溯算法解题框架.md)  
-[BFS 算法解题框架p0](./blogs/algorithm/框架思维/BFS算法解题框架.md)  
-[二分搜索解题框架p0](./blogs/algorithm/框架思维/二分搜索解题框架.md)  
-[滑动窗口算法解题框架p0](./blogs/algorithm/框架思维/滑动窗口算法解题框架.md)  
+[思维与框架 P0](./blogs/algorithm/框架思维/思维与框架.md)  
+[动态规划解题框架 P0](./blogs/algorithm/框架思维/动态规划解题框架.md)  
+[回溯算法解题框架 P0](./blogs/algorithm/框架思维/回溯算法解题框架.md)  
+[BFS 算法解题框架 P0](./blogs/algorithm/框架思维/BFS算法解题框架.md)  
+[二分搜索解题框架 P0](./blogs/algorithm/框架思维/二分搜索解题框架.md)  
+[滑动窗口算法解题框架 P0](./blogs/algorithm/框架思维/滑动窗口算法解题框架.md)  
 [股票买卖解题框架](./blogs/algorithm/框架思维/股票买卖解题框架.md)  
 [打家劫舍解题框架](./blogs/algorithm/框架思维/打家劫舍解题框架.md)  
-[区间问题解题框架p0](./blogs/algorithm/框架思维/区间问题解题框架.md)  
-[nSum 问题解题框架p0](./blogs/algorithm/框架思维/nSum问题解题框架.md)
+[区间问题解题框架 P0](./blogs/algorithm/框架思维/区间问题解题框架.md)  
+[nSum 问题解题框架 P0](./blogs/algorithm/框架思维/nSum问题解题框架.md)
 
 ### 数据结构
 
-- 链表p0
+- 链表 P0
 
   - [递归反转链表的一部分](./blogs/algorithm/数据结构/链表/递归反转链表的一部分.md)
   - [如何 K 个一组反转一个链表](./blogs/algorithm/数据结构/链表/如何K个一组反转一个链表.md)
   - [如何判断回文链表](./blogs/algorithm/数据结构/链表/如何判断回文链表.md)
 
-- 二叉树p0
+- 二叉树 P0
 
   - [二叉树](./blogs/algorithm/数据结构/二叉树/二叉树.md)
   - [二叉树搜索](./blogs/algorithm/数据结构/二叉树/二叉树搜索.md)
@@ -194,14 +194,14 @@
 
   - [LRU 和 LFU 算法](./blogs/algorithm/数据结构/设计数据结构/LRU和LFU算法.md)
   - [最大频率栈](./blogs/algorithm/数据结构/设计数据结构/最大频率栈.md)
-  - [数据流中位数p0](./blogs/algorithm/数据结构/设计数据结构/数据流中位数.md)
+  - [数据流中位数 P0](./blogs/algorithm/数据结构/设计数据结构/数据流中位数.md)
   - [推特数据结构](./blogs/algorithm/数据结构/设计数据结构/推特数据结构.md)
-  - [单调栈结构p0](./blogs/algorithm/数据结构/设计数据结构/单调栈结构.md)
-  - [单调队列结构p0](./blogs/algorithm/数据结构/设计数据结构/单调队列结构.md)
+  - [单调栈结构 P0](./blogs/algorithm/数据结构/设计数据结构/单调栈结构.md)
+  - [单调队列结构 P0](./blogs/algorithm/数据结构/设计数据结构/单调队列结构.md)
   - [二叉堆](./blogs/algorithm/数据结构/设计数据结构/二叉堆.md)
-  - [队列、栈的互相实现p0](./blogs/algorithm/数据结构/设计数据结构/队列、栈的互相实现.md)
+  - [队列、栈的互相实现 P0](./blogs/algorithm/数据结构/设计数据结构/队列、栈的互相实现.md)
 
-- 数组p0
+- 数组 P0
 
   - [二分查找](./blogs/algorithm/数据结构/数组/二分查找.md)
   - [二分查找优化算法效率](./blogs/algorithm/数据结构/数组/二分查找优化算法效率.md)
@@ -213,14 +213,14 @@
 
 ### 动态规划
 
-- 基本技巧p0
+- 基本技巧 P0
 
   - [动态规划解题框架](./blogs/algorithm/框架思维/动态规划解题框架.md)
   - [base case 和备忘录的初始值](./blogs/algorithm/动态规划/基本技巧/basecase和备忘录的初始值.md)
   - [状态压缩](./blogs/algorithm/动态规划/基本技巧/状态压缩.md)
   - [动态规划与回溯算法](./blogs/algorithm/动态规划/基本技巧/动态规划与回溯算法.md)
 
-- 子序列类型p0
+- 子序列类型 P0
 
   - [编辑距离](./blogs/algorithm/动态规划/子序列类型/编辑距离.md)
   - [最长递增子序列](./blogs/algorithm/动态规划/子序列类型/最长递增子序列.md)
@@ -229,20 +229,20 @@
   - [最长公共子序列](./blogs/algorithm/动态规划/子序列类型/最长公共子序列.md)
   - [子序列问题模板-最长回文子序列](./blogs/algorithm/动态规划/子序列类型/子序列问题模板-最长回文子序列.md)
 
-- 背包类型问题p0
+- 背包类型问题 P0
 
   - [0-1 背包问题](./blogs/algorithm/动态规划/背包类型问题/0-1背包问题.md)
   - [子集背包问题](./blogs/algorithm/动态规划/背包类型问题/子集背包问题.md)
   - [完全背包问题](./blogs/algorithm/动态规划/背包类型问题/完全背包问题.md)
 
-- 贪心类型问题p0
+- 贪心类型问题 P0
 
   - [区间调度问题](./blogs/algorithm/动态规划/贪心类型问题/区间调度问题.md)
   - [贪心思想玩跳跃游戏](./blogs/algorithm/动态规划/贪心类型问题/贪心思想玩跳跃游戏.md)
 
 - 动态规划玩游戏
 
-  - [最小路径和p0](./blogs/algorithm/动态规划/动态规划玩游戏/最小路径和.md)
+  - [最小路径和 P0](./blogs/algorithm/动态规划/动态规划玩游戏/最小路径和.md)
   - [魔塔](./blogs/algorithm/动态规划/动态规划玩游戏/魔塔.md)
   - [正则表达式匹配](./blogs/algorithm/动态规划/动态规划玩游戏/正则表达式匹配.md)
   - [高楼扔鸡蛋](./blogs/algorithm/动态规划/动态规划玩游戏/高楼扔鸡蛋.md)
@@ -256,7 +256,7 @@
 
 ### 算法技巧
 
-- 回溯算法（DFS 算法）p0
+- 回溯算法（DFS 算法） P0
 
   - [回溯算法解题框架](./blogs/algorithm/框架思维/回溯算法解题框架.md)
   - [集合划分问题](./blogs/algorithm/算法技巧/回溯算法_DFS算法/集合划分问题.md)
@@ -264,7 +264,7 @@
   - [数独](./blogs/algorithm/算法技巧/回溯算法_DFS算法/数独.md)
   - [括号生成](./blogs/algorithm/算法技巧/回溯算法_DFS算法/括号生成.md)
 
-- BFS 算法p0
+- BFS 算法 P0
 
   - [BFS 算法解题框架](./blogs/algorithm/框架思维/BFS算法解题框架.md)
   - [拼图游戏](./blogs/algorithm/算法技巧/BFS算法/拼图游戏.md)
