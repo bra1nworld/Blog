@@ -103,6 +103,7 @@ function getNext(pattern: string): number[] {
   const next = Array.from({ length: n });
   let i = 0,
     k = -1;
+    next[0] = -1;
 
   while (i < n - 1) {
     //p[k]表示前缀，p[i]表示后缀
