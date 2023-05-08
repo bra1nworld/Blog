@@ -100,7 +100,7 @@ function KMP(text: string, pattern: string) {
 // getNext 匹配模式可以看做KMP的匹配模式相同,只是变成了两个相同的pattern自己匹配自己
 function getNext(pattern: string): number[] {
   let n = pattern.length;
-  const next = Array.from({ length: n });
+  const next = Array.from({ length: n },i=>-1);
   let i = 0,
     k = -1;
 
